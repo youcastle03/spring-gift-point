@@ -66,7 +66,7 @@ public class OrderService {
         try {
             kakaoService.kakaoTalkToMe(member.getAccessToken(), savedOrder);
         }catch (JsonProcessingException e) {
-            throw new OptionException("잘못된 요청");
+//            throw new OptionException("잘못된 요청");
         }
         return new OrderResponseDto(savedOrder.getId(), savedOrder.getOption().getId(),
             savedOrder.getQuantity(),
