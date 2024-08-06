@@ -60,7 +60,7 @@ public class WishService {
         if (wish.isEmpty()){
             throw new WishException("위시리스트에 존재하지 않는 상품입니다.");
         }
-        wishRepository.delete(wish.get());
+        wishRepository.deleteById(wish.get().getId());
     }
 
     public Page<Wish> findByMemberId(Long memberId, Pageable pageable) {
